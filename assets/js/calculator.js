@@ -18,19 +18,19 @@ totalSalaryBtn.onclick = function () {
         if (maxRealEstateFinancingYearsCount.value == '') {
             maxRealEstateFinancingYearsCount.value = 25;
         }
-        let personFinancingMonthes = maxPersonFinancingYearsCount.value * 12;
-        let personFinancingInstallment = (totalSalary.value * 33.33) / 100;
-        let realEstateFinancingMonthes = maxRealEstateFinancingYearsCount.value * 12;
-        let realEstateFinancingInstallment = (totalSalary.value * 55) / 100;
+        let personFinancingMonthes = (maxPersonFinancingYearsCount.value * 12).toFixed(2);
+        let personFinancingInstallment = ((totalSalary.value * 33.33) / 100).toFixed(2);
+        let realEstateFinancingMonthes = (maxRealEstateFinancingYearsCount.value * 12).toFixed(2);
+        let realEstateFinancingInstallment = ((totalSalary.value * 55) / 100).toFixed(2);
         let MonthlyCommitmentsInstallment = ((totalSalary.value * (45 - 33.33)) / 100).toFixed(2);
-        maxPersonFinancingTotal.value = personFinancingMonthes * personFinancingInstallment;
+        maxPersonFinancingTotal.value = (personFinancingMonthes * personFinancingInstallment).toFixed(2);
         maxPersonFinancingMonthly.value = personFinancingInstallment;
-        PersonFinancingTheRest.value = totalSalary.value - personFinancingInstallment;
-        maxRealEstateFinancingTotal.value = realEstateFinancingMonthes * realEstateFinancingInstallment;
+        PersonFinancingTheRest.value = (totalSalary.value - personFinancingInstallment).toFixed(2);
+        maxRealEstateFinancingTotal.value = (realEstateFinancingMonthes * realEstateFinancingInstallment).toFixed(2);
         maxRealEstateFinancingMonthly.value = realEstateFinancingInstallment;
-        RealEstateFinancingTheRest.value = totalSalary.value - realEstateFinancingInstallment;
+        RealEstateFinancingTheRest.value = (totalSalary.value - realEstateFinancingInstallment).toFixed(2);
         MonthlyCommitments.value = MonthlyCommitmentsInstallment;
-        MonthlyCommitmentsThrRest.value = totalSalary.value - MonthlyCommitmentsInstallment;
+        MonthlyCommitmentsThrRest.value = (totalSalary.value - MonthlyCommitmentsInstallment).toFixed(2);
 
     }
 }
