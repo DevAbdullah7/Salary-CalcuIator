@@ -411,4 +411,7 @@ body {
     font-size: 16px;
     margin-left: 5px;
 }
+.inputsContainer input:disabled {
+    color: #000
+}
 /* ----- FOOTER ----- */
