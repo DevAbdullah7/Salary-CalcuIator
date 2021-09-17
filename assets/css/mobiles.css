@@ -354,15 +354,25 @@ body {
 }
 .totalSalary label {
     position: relative;
-    transform: translateY(-2px);
+    transform: translateY(-15px);
     margin-left: 5px;
+}
+.totalSalary span {
+    position: relative;
+    width: 80px;
+    height: 34px;
+    margin-left: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.35);
 }
 .totalSalaryDetailes h1 {
     margin: 10px 0;
 }
 .totalSalaryDetailes {
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.25);
     border-radius: 10px;
     width: 98%;
     margin: 0 auto;
