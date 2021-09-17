@@ -22,11 +22,15 @@ totalSalaryBtn.onclick = function () {
         let personFinancingInstallment = (totalSalary.value * 33.33) / 100;
         let realEstateFinancingMonthes = maxRealEstateFinancingYearsCount.value * 12;
         let realEstateFinancingInstallment = (totalSalary.value * 55) / 100;
+        let MonthlyCommitmentsInstallment = ((totalSalary.value * (45 - 33.33)) / 100).toFixed(2);
         maxPersonFinancingTotal.value = personFinancingMonthes * personFinancingInstallment;
         maxPersonFinancingMonthly.value = personFinancingInstallment;
         PersonFinancingTheRest.value = totalSalary.value - personFinancingInstallment;
         maxRealEstateFinancingTotal.value = realEstateFinancingMonthes * realEstateFinancingInstallment;
         maxRealEstateFinancingMonthly.value = realEstateFinancingInstallment;
         RealEstateFinancingTheRest.value = totalSalary.value - realEstateFinancingInstallment;
+        MonthlyCommitments.value = MonthlyCommitmentsInstallment;
+        MonthlyCommitmentsThrRest.value = totalSalary.value - MonthlyCommitmentsInstallment;
+
     }
 }
