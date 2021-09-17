@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <title>Salary Calculator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------------ FAVICON ------------>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/media/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!------------ REMIX ICONS ------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!------------ Fonts ------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!------------ CSS FILES ------------>
+    <!-- Mobiles -->
+    <link rel="stylesheet" href="./assets/css/mobiles.css">
+    <!-- Taplates -->
+    <link rel="stylesheet" href="./assets/css/taplates.css">
+    <!-- Laptops -->
+    <link rel="stylesheet" href="./assets/css/laptops.css">
+    <!-- Desktops -->
+    <link rel="stylesheet" href="./assets/css/desktops.css">
+</head>
+
+<body dir="rtl">
+    <!------------ Header ------------>
+
+    <!------------ Body ------------>
+    <section class="container">
+        <div class="menu">
+            <div class="control">
+                <i class="fa fa-times-circle x" aria-hidden="true"></i>
+                <i class="fa fa-arrow-circle-left left" aria-hidden="true"></i>
+            </div>
+        </div>
+        <section class="infoLayout">
+            <img src="./assets/media/1.jpeg" alt="">
+            <h1>عبدالله القحطاني</h1>
+            <p>مبرمج بايثون<br>مبرمج فرونت-اند<br>مصمم UI/UX</p>
+            <div class="social">
+                <div class="twitter cards">
+                    <a href="https://mobile.twitter.com/iGreato1" target="_blanck"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                </div>
+                <div class="instagram cards">
+                    <a href="https://instagram.com/iGreato1" target="_blanck"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></i></a>
+                </div>
+                <div class="github cards">
+                    <a href="https://github.com/iGreato1" target="_blanck"><i class="fa fa-github"
+                            aria-hidden="true"></i></a>
+                </div>
+                <div class="whatsapp cards">
+                    <a href="https://api.whatsapp.com/message/VCGYIFE6Y3ADG1" target="_blanck"><i class="fa fa-whatsapp"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="main">
+            <div class="salaryCalculator">
+                <div class="totalSalaryContainer">
+                    <div class="totalSalary">
+                        <label for="totalSalary">اجمالي الراتب:</label>
+                        <input type="number" id="totalSalary">
+                    </div>
+                    <div class="totalSalaryDetailes">
+                        <div class="maxPersonFinancing">
+                            <h1>التمويل الشخصي:</h1>
+                            <div class="inputsContainer">
+                                <label for="maxPersonFinancingYearsCount">عدد السنوات:</label>
+                                <input type="number" id="maxPersonFinancingYearsCount">
+                            </div>
+                            <br>
+                            <div class="inputsContainer">
+                                <label for="maxPersonFinancingTotal">الحد الاعلى:</label>
+                                <input type="number" id="maxPersonFinancingTotal" disabled>
+                            </div>
+                            <br>
+                            <div class="inputsContainer">
+                                <label for="maxPersonFinancingMonthly">الحد الاعلى للقسط الشهري:</label>
+                                <input type="number" id="maxPersonFinancingMonthly" disabled>
+                            </div>
+                            <br>
+                            <div class="inputsContainer">
+                                <label for="maxPersonFinancingMonthly">المتبقي:</label>
+                                <input type="number" id="maxPersonFinancingMonthly" disabled>
+                            </div>
+                        </div>
+                        <div class="maxRealEstateFinancing">
+                            <h1>التمويل العقاري:</h1>
+                            <div class="inputsContainer">
+                                <label for="maxRealEstateFinancingYearsCount">عدد السنوات:</label>
+                                <input type="number" id="maxRealEstateFinancingYearsCount">
+                            </div>
+                            <br>
+                            <div class="inputsContainer">
+                                <label for="maxRealEstateFinancingTotal">الحد الاعلى:</label>
+                                <input type="number" id="maxRealEstateFinancingTotal" disabled>
+                            </div>
+                            <br>
+                            <div class="inputsContainer">
+                                <label for="maxRealEstateFinancingMonthly">الحد الاعلى للقسط الشهري:</label>
+                                <input type="number" id="maxRealEstateFinancingMonthly" disabled>
+                            </div>
+                            <br>
+                            <div class="inputsContainer">
+                                <label for="maxPersonFinancingMonthly">المتبقي:</label>
+                                <input type="number" id="maxPersonFinancingMonthly" disabled>
+                            </div>
+                        </div>
+                        <div class="maxMonthlyCommitments">
+                            <h1>الالتزامات الشهرية:</h1>
+                            <div class="inputsContainer">
+                                <label for="MonthlyCommitments">الحد الاعلى بالاضافة <br> الى الاقساط:</label>
+                                <input type="number" id="MonthlyCommitments">
+                            </div>
+                            <br>
+                            <div class="inputsContainer">
+                                <label for="maxPersonFinancingMonthly">المتبقي:</label>
+                                <input type="number" id="maxPersonFinancingMonthly" disabled>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!------------ Footer ------------>
+
+    <!------------ JS FILES ------------>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/calculator.js"></script>
+</body>
+
+</html>
