@@ -16,14 +16,23 @@ monthlyCommitments.onclick = function () {
     maxMonthlyCommitments.classList.toggle('show');
     maxPersonFinancing.classList.remove('show');
     maxRealEstateFinancing.classList.remove('show');
+    monthlyCommitments.classList.toggle('show');
+    personFinancing.classList.remove('show');
+    RealEstateFinancing.classList.remove('show');
 }
 personFinancing.onclick = function () {
     maxPersonFinancing.classList.toggle('show');
     maxMonthlyCommitments.classList.remove('show');
     maxRealEstateFinancing.classList.remove('show');
+    personFinancing.classList.toggle('show');
+    monthlyCommitments.classList.remove('show');
+    RealEstateFinancing.classList.remove('show');
 }
 RealEstateFinancing.onclick = function () {
     maxRealEstateFinancing.classList.toggle('show');
     maxMonthlyCommitments.classList.remove('show');
     maxPersonFinancing.classList.remove('show');
+    RealEstateFinancing.classList.toggle('show');
+    monthlyCommitments.classList.remove('show');
+    personFinancing.classList.remove('show');
 }
