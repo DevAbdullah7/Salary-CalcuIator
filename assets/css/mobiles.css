@@ -52,9 +52,6 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-.container {
-    position: relative;
-}
 .menu {
     position: fixed;
     width: 50px;
@@ -433,7 +430,6 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    border: none;
     border: 2px solid rgba(0, 0, 0, 0.5);
     outline: none;
     background: rgba(255, 255, 255, 0.25);
@@ -455,5 +451,26 @@ body {
 }
 .maxRealEstateFinancing.show {
     display: block;
+}
+#maxPersonFinancingTotal,
+#maxPersonFinancingMonthly,
+#PersonFinancingTheRest,
+#maxRealEstateFinancingTotal,
+#maxRealEstateFinancingMonthly,
+#RealEstateFinancingTheRest,
+#MonthlyCommitments,
+#MonthlyCommitmentsThrRest {
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    outline: none;
+    background: rgba(255, 255, 255, 0.25);
+    text-align: center;
+    font-size: 16px;
+    margin-left: 5px;
 }
 /* ----- FOOTER ----- */

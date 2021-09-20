@@ -23,14 +23,14 @@ totalSalaryBtn.onclick = function () {
         let realEstateFinancingMonthes = (maxRealEstateFinancingYearsCount.value * 12).toFixed(2);
         let realEstateFinancingInstallment = ((totalSalary.value * 55) / 100).toFixed(2);
         let MonthlyCommitmentsInstallment = ((totalSalary.value * (45 - 33.33)) / 100).toFixed(2);
-        maxPersonFinancingTotal.value = (personFinancingMonthes * personFinancingInstallment).toFixed(2);
-        maxPersonFinancingMonthly.value = personFinancingInstallment;
-        PersonFinancingTheRest.value = (totalSalary.value - personFinancingInstallment).toFixed(2);
-        maxRealEstateFinancingTotal.value = (realEstateFinancingMonthes * realEstateFinancingInstallment).toFixed(2);
-        maxRealEstateFinancingMonthly.value = realEstateFinancingInstallment;
-        RealEstateFinancingTheRest.value = (totalSalary.value - realEstateFinancingInstallment).toFixed(2);
-        MonthlyCommitments.value = MonthlyCommitmentsInstallment;
-        MonthlyCommitmentsThrRest.value = (totalSalary.value - MonthlyCommitmentsInstallment).toFixed(2);
+        maxPersonFinancingTotal.innerHTML = (personFinancingMonthes * personFinancingInstallment).toFixed(2);
+        maxPersonFinancingMonthly.innerHTML = personFinancingInstallment;
+        PersonFinancingTheRest.innerHTML = (totalSalary.value - personFinancingInstallment).toFixed(2);
+        maxRealEstateFinancingTotal.innerHTML = (realEstateFinancingMonthes * realEstateFinancingInstallment).toFixed(2);
+        maxRealEstateFinancingMonthly.innerHTML = realEstateFinancingInstallment;
+        RealEstateFinancingTheRest.innerHTML = (totalSalary.value - realEstateFinancingInstallment).toFixed(2);
+        MonthlyCommitments.innerHTML = MonthlyCommitmentsInstallment;
+        MonthlyCommitmentsThrRest.innerHTML = (totalSalary.value - MonthlyCommitmentsInstallment).toFixed(2);
 
     }
 }
