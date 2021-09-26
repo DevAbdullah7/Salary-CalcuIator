@@ -387,8 +387,9 @@ body {
 .btns {
     position: relative;
     width: 70%;
+    margin: auto;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     transform: translateY(2px);
 }
@@ -401,11 +402,13 @@ body {
     align-items: center;
     text-align: center;
     font-size: 12px;
-    background-color: rgba(255, 255, 255, 0.80);
-    border-radius: 10px 10px 0 0;
+    background-color: rgba(0, 0, 0, 0.21);
+    /* border-radius: 10px 10px 0 0; */
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-bottom: none;
     cursor: pointer;
+    color: var(--white);
 }
 .totalSalaryDetailes h1 {
     margin: 10px 0;
@@ -413,12 +416,13 @@ body {
 .totalSalaryDetailes {
     position: relative;
     width: 100%;
+    /* transform: translateY(50%); */
     /* margin-right: 5px; */
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.80);
     border: 2px solid rgba(0, 0, 0, 0.5);
     /* border-top: none; */
-    border-radius: 10px 0 10px 10px;
+    border-radius: 10px;
     z-index: -1;
 }
 .totalSalaryDetailes .inputsContainer {
@@ -483,14 +487,34 @@ body {
 .monthlyCommitments,
 .personFinancing,
 .RealEstateFinancing {
-    opacity: 0.5;
+    opacity: 0.25;
+    border-radius: 0;
+    transition: 0.2s ease-in-out;
 }
 .monthlyCommitments.show,
-.personFinancing.show,
+.RealEstateFinancing.show,
+.personFinancing.show {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.1);
+    border-radius: 5px 5px 0 0;
+}
+.monthlyCommitments {
+    border-radius: 0 10px 0 0;
+}
+.monthlyCommitments.show {
+    border-radius: 5px 10px 0 0;
+    transform: translateY(-3px) scale(1.1);
+}
+.RealEstateFinancing {
+    border-radius: 10px 0 0 0;
+}
 .RealEstateFinancing.show {
+    border-radius: 10px 5px 0 0;
+}
+.personFinancing.show {
     opacity: 1;
 }
-#MonthlyCommitments {
+/* #MonthlyCommitments {
     margin-right: 20px;
-}
+} */
 /* ----- FOOTER ----- */

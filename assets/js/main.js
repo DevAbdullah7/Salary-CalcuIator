@@ -4,9 +4,8 @@ let main = document.querySelector('.main');
 let monthlyCommitments = document.querySelector('.monthlyCommitments');
 let personFinancing = document.querySelector('.personFinancing');
 let RealEstateFinancing = document.querySelector('.RealEstateFinancing');
-let maxMonthlyCommitments = document.querySelector('.maxMonthlyCommitments');
-let maxPersonFinancing = document.querySelector('.maxPersonFinancing');
-let maxRealEstateFinancing = document.querySelector('.maxRealEstateFinancing');
+let btns = document.querySelectorAll('.btns span');
+let totalSalaryDetailes = document.querySelectorAll('.totalSalaryDetailes div');
 menu.onclick = function () {
     menu.classList.toggle('activate');
     infoLayout.classList.toggle('activate');
@@ -16,23 +15,32 @@ monthlyCommitments.onclick = function () {
     maxMonthlyCommitments.classList.toggle('show');
     maxPersonFinancing.classList.remove('show');
     maxRealEstateFinancing.classList.remove('show');
-    monthlyCommitments.classList.toggle('show');
-    personFinancing.classList.remove('show');
-    RealEstateFinancing.classList.remove('show');
 }
 personFinancing.onclick = function () {
     maxPersonFinancing.classList.toggle('show');
     maxMonthlyCommitments.classList.remove('show');
     maxRealEstateFinancing.classList.remove('show');
-    personFinancing.classList.toggle('show');
-    monthlyCommitments.classList.remove('show');
-    RealEstateFinancing.classList.remove('show');
 }
 RealEstateFinancing.onclick = function () {
     maxRealEstateFinancing.classList.toggle('show');
     maxMonthlyCommitments.classList.remove('show');
     maxPersonFinancing.classList.remove('show');
-    RealEstateFinancing.classList.toggle('show');
-    monthlyCommitments.classList.remove('show');
-    personFinancing.classList.remove('show');
 }
+let test = 'Nothing'
+console.log(test)
+btns.forEach(function (btn) {
+    btn.onclick = function () {
+        btns.forEach(function (btn) {
+            btn.classList.remove('show');
+        })
+        this.classList.add('show');
+    }
+})
+totalSalaryDetailes.forEach(function (totalSalaryDetaile) {
+    totalSalaryDetaile.onclick = function () {
+        totalSalaryDetailes.forEach(function (totalSalaryDetaile) {
+            totalSalaryDetaile.classList.remove('show');
+        })
+        this.classList.add('show');
+    }
+})
