@@ -79,12 +79,24 @@
                             placeholder="اجمالي الراتب">
                     </div>
                     <div class="btns">
-                        <span class="monthlyCommitments show">الالتزامات الشهرية</span>
-                        <span class="personFinancing">التمويل الشخصي</span>
-                        <span class="RealEstateFinancing">التمويل العقاري</span>
+                        <span class="monthlyCommitments show" name="monthlyCommitments">الالتزامات الشهرية</span>
+                        <span class="personFinancing" name="personFinancing">التمويل الشخصي</span>
+                        <span class="RealEstateFinancing" name="RealEstateFinancing">التمويل العقاري</span>
                     </div>
                     <div class="totalSalaryDetailes">
-                        <div class="maxPersonFinancing">
+                        <section class="maxMonthlyCommitments">
+                            <h1>الالتزامات الشهرية:</h1>
+                            <div class="inputsContainer">
+                                <div for="MonthlyCommitments">الحد الاعلى:</div>
+                                <div id="MonthlyCommitments"></div>
+                            </div>
+                            <br>
+                            <div class="inputsContainer">
+                                <div for="MonthlyCommitmentsThrRest">المتبقي:</div>
+                                <div id="MonthlyCommitmentsThrRest"></div>
+                            </div>
+                        </section>
+                        <section class="maxPersonFinancing">
                             <h1>التمويل الشخصي:</h1>
                             <div class="inputsContainer">
                                 <label for="maxPersonFinancingYearsCount">عدد السنوات:</label>
@@ -106,8 +118,8 @@
                                 <div for="PersonFinancingTheRest">المتبقي:</div>
                                 <div id="PersonFinancingTheRest"></div>
                             </div>
-                        </div>
-                        <div class="maxRealEstateFinancing">
+                        </section>
+                        <section class="maxRealEstateFinancing">
                             <h1>التمويل العقاري:</h1>
                             <div class="inputsContainer">
                                 <label for="maxRealEstateFinancingYearsCount">عدد السنوات:</label>
@@ -129,19 +141,7 @@
                                 <div for="RealEstateFinancingTheRest">المتبقي:</div>
                                 <div id="RealEstateFinancingTheRest"></div>
                             </div>
-                        </div>
-                        <div class="maxMonthlyCommitments">
-                            <h1>الالتزامات الشهرية:</h1>
-                            <div class="inputsContainer">
-                                <div for="MonthlyCommitments">الحد الاعلى:</div>
-                                <div id="MonthlyCommitments"></div>
-                            </div>
-                            <br>
-                            <div class="inputsContainer">
-                                <div for="MonthlyCommitmentsThrRest">المتبقي:</div>
-                                <div id="MonthlyCommitmentsThrRest"></div>
-                            </div>
-                        </div>
+                        </section>
                     </div>
                 </div>
             </div>

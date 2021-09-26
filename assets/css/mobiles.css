@@ -403,7 +403,6 @@ body {
     text-align: center;
     font-size: 12px;
     background-color: rgba(0, 0, 0, 0.21);
-    /* border-radius: 10px 10px 0 0; */
     box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-bottom: none;
@@ -415,13 +414,14 @@ body {
 }
 .totalSalaryDetailes {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    /* transform: translateY(50%); */
-    /* margin-right: 5px; */
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.80);
     border: 2px solid rgba(0, 0, 0, 0.5);
-    /* border-top: none; */
     border-radius: 10px;
     z-index: -1;
 }
@@ -450,6 +450,10 @@ body {
 }
 .inputsContainer input:disabled {
     color: #000
+}
+.maxMonthlyCommitments {
+    display: block;
+    width: 100%;
 }
 .maxPersonFinancing {
     display: none;
@@ -514,7 +518,4 @@ body {
 .personFinancing.show {
     opacity: 1;
 }
-/* #MonthlyCommitments {
-    margin-right: 20px;
-} */
 /* ----- FOOTER ----- */
