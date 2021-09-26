@@ -1,3 +1,4 @@
+
 let menu = document.querySelector('.menu');
 let infoLayout = document.querySelector('.infoLayout');
 let main = document.querySelector('.main');
@@ -32,3 +33,10 @@ btns.forEach(function (btn) {
         }
     }
 })
+let test = document.querySelector('#commitmentsList');
+console.log(test);
+let patBtn = document.querySelector('.pay');
+let payValue = document.querySelector('#payValue');
+patBtn.onclick = function () {
+    MonthlyCommitmentsThrRest.innerHTML = Number(MonthlyCommitmentsThrRest.value) - Number(payValue.value);
+}

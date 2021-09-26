@@ -420,10 +420,9 @@ body {
     flex-direction: column;
     width: 100%;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: rgba(255, 255, 255, 0.75);
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    z-index: -1;
 }
 .totalSalaryDetailes .inputsContainer {
     display: -webkit-box;
@@ -448,12 +447,12 @@ body {
     font-size: 16px;
     margin-left: 5px;
 }
-.inputsContainer input:disabled {
-    color: #000
-}
 .maxMonthlyCommitments {
-    display: block;
+    display: none;
     width: 100%;
+}
+.maxMonthlyCommitments.show {
+    display: block;
 }
 .maxPersonFinancing {
     display: none;
@@ -517,5 +516,77 @@ body {
 }
 .personFinancing.show {
     opacity: 1;
+}
+.inputsContainers .MonthlyCommitmentsThrRest {
+    background-color: rgba(0, 0, 0, 0.5) importent!;
+}
+.maxMonthlyCommitments .inputsContainer, .inputsContainers {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.maxMonthlyCommitments .inputsContainer input {
+    width: 100px;
+    margin: 0;
+}
+.maxMonthlyCommitments .inputsContainer select {
+    width: 80px;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+}
+.maxMonthlyCommitments .inputsContainer span {
+    width: 80px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
+    color: white;
+    cursor: pointer;
+}
+.result {
+    width: 100%;
+    height: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+.installment h3 {
+    text-align: center;
+}
+/* .installment .installmentDetailes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+} */
+.installment .maxPersonFinancingInfo, 
+.installment .maxRealEstateFinancingInfo,
+.installment .currentInstallment,
+.installment .surplus {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.result .infoDetaile {
+    width: 67.5px;
+    height: 25px;
+    margin-right: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
+    border-radius: 5px;
 }
 /* ----- FOOTER ----- */
