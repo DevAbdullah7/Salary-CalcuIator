@@ -42,10 +42,23 @@ let commitmentsList = document.querySelector('#commitmentsList');
 let patBtn = document.querySelector('.pay');
 let payValue = document.querySelector('#payValue');
 patBtn.onclick = function () {
-    MonthlyCommitmentsThrRest.value = MonthlyCommitmentsThrRest.value - payValue.value;
+    let temp = 0;
+    MonthlyCommitmentsThrRest.textContent = parseInt(MonthlyCommitmentsThrRest.textContent) - payValue.value;
     if (commitmentsList.value === 'installment') {
-        infoDetaileC.value = infoDetaileC.value + payValue.value;
+        if (infoDetaileC.textContent == '') {
+            infoDetaileC.textContent = parseInt(payValue.value)
+        } else {
+            infoDetaileC.textContent = parseInt(infoDetaileC.textContent) + parseInt(payValue.value);
+        }
+        let percentInstallment = document.querySelector('.percentInstallment');
+        percentInstallment.innerHTML = `${((parseInt(infoDetaileC.textContent) * 100) / parseInt(totalSalary.value)).toFixed(2)}%`
     } else if (commitmentsList.value === 'bills') {
-        billsDetaile.innerHTML = Number(billsDetaile.textContent) + payValue.value;
+        if (billsDetaile.textContent == '') {
+            billsDetaile.textContent = parseInt(payValue.value)
+        } else {
+            billsDetaile.innerHTML = parseInt(billsDetaile.textContent) + parseInt(payValue.value);
+        }
+        let percentBills = document.querySelector('.percentBills');
+        percentBills.innerHTML = `${((parseInt(billsDetaile.textContent) * 100) / parseInt(totalSalary.value)).toFixed(2)}%`
     }
 }

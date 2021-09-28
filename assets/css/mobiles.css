@@ -521,7 +521,16 @@ body {
 }
 .MonthlyCommitmentsThrRestTitle {
     border: none;
-    margin-right: 15px;
+    margin-right: 10px;
+}
+.MonthlyCommitmentsThrRest {
+    width: 67.5px;
+    height: 25px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
 }
 .maxMonthlyCommitments .inputsContainer, .inputsContainers {
     width: 100%;
@@ -532,6 +541,7 @@ body {
 }
 .maxMonthlyCommitments .inputsContainer input {
     width: 100px;
+    height: 25px;
     margin: 0;
     border: none;
 }
@@ -589,7 +599,8 @@ body {
 .infoDetaileR,
 .infoDetaileC,
 .billsDetaile,
-.percentN {
+.percentInstallment,
+.percentBills {
     width: 67.5px;
     height: 25px;
     margin-right: 5px;
