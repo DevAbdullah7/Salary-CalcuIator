@@ -344,7 +344,7 @@ body {
     font-size: 20px;
 }
 .totalSalary input {
-    width: 200px;
+    width: 150px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -355,7 +355,7 @@ body {
     outline: none;
     background: rgba(255, 255, 255, 0.25);
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
 }
 .totalSalary input::-webkit-outer-spin-button,
 .totalSalary input::-webkit-inner-spin-button {
@@ -364,6 +364,11 @@ body {
 }
 .totalSalary input[type=number] {
     -moz-appearance: textfield;
+}
+.totalSalary input::placeholder {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+    opacity: 1;
 }
 .totalSalary label {
     position: relative;
@@ -375,15 +380,15 @@ body {
 .totalSalary span {
     position: relative;
     width: 80px;
-    height: 34px;
+    height: 50px;
     margin-left: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.5) inset;
 }
 .btns {
     position: relative;
