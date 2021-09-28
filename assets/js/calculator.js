@@ -35,5 +35,7 @@ totalSalaryBtn.onclick = function () {
         maxRealEstateFinancingMonthly.innerHTML = realEstateFinancingInstallment;
         RealEstateFinancingTheRest.innerHTML = (totalSalary.value - realEstateFinancingInstallment).toFixed(2);
         MonthlyCommitmentsThrRest.value = totalSalary.value;
+        infoDetaileP.innerHTML = personFinancingInstallment;
+        infoDetaileR.innerHTML = realEstateFinancingInstallment;
     }
 }

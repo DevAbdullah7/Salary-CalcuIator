@@ -323,6 +323,7 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
     -webkit-backdrop-filter: blur(3px);
             backdrop-filter: blur(3px);
     border-radius: 10px;
@@ -350,7 +351,7 @@ body {
     align-items: center;
     border-radius: 10px;
     border: none;
-    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.35);
     outline: none;
     background: rgba(255, 255, 255, 0.25);
     text-align: center;
@@ -518,8 +519,9 @@ body {
 .personFinancing.show {
     opacity: 1;
 }
-.MonthlyCommitmentsThrRest {
+.MonthlyCommitmentsThrRestTitle {
     border: none;
+    margin-right: 15px;
 }
 .maxMonthlyCommitments .inputsContainer, .inputsContainers {
     width: 100%;
@@ -568,13 +570,15 @@ body {
     border-radius: 10px;
     overflow-y: scroll;
 }
-.installment h3 {
+.result h3 {
     text-align: center;
+    margin-bottom: 10px;
 }
-.installment .maxPersonFinancingInfo, 
-.installment .maxRealEstateFinancingInfo,
-.installment .currentInstallment,
-.installment .surplus {
+.result .maxPersonFinancingInfo, 
+.result .maxRealEstateFinancingInfo,
+.result .currentInstallment,
+.result .totalBills,
+.result .percent {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -583,7 +587,9 @@ body {
 .infoDetaile,
 .infoDetaileP,
 .infoDetaileR,
-.infoDetaileC {
+.infoDetaileC,
+.billsDetaile,
+.percentN {
     width: 67.5px;
     height: 25px;
     margin-right: 5px;
@@ -591,5 +597,8 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     border-radius: 5px;
+}
+.result hr {
+    margin: 10px 0;
 }
 /* ----- FOOTER ----- */

@@ -10,6 +10,11 @@ let maxPersonFinancing = document.querySelector('.maxPersonFinancing');
 let maxRealEstateFinancing = document.querySelector('.maxRealEstateFinancing');
 let btns = document.querySelectorAll('.btns span');
 let totalSalaryDetailes = document.querySelectorAll('.totalSalaryDetailes section');
+let infoDetaileP = document.querySelector('.infoDetaileP');
+let infoDetaileR = document.querySelector('.infoDetaileR');
+let infoDetaileC = document.querySelector('.infoDetaileC');
+let infoDetaile = document.querySelector('.infoDetaile');
+let billsDetaile = document.querySelector('.billsDetaile');
 menu.onclick = function () {
     menu.classList.toggle('activate');
     infoLayout.classList.toggle('activate');
@@ -39,13 +44,8 @@ let payValue = document.querySelector('#payValue');
 patBtn.onclick = function () {
     MonthlyCommitmentsThrRest.value = MonthlyCommitmentsThrRest.value - payValue.value;
     if (commitmentsList.value === 'installment') {
-        let infoDetaileP = document.querySelector('.infoDetaileP');
-        let infoDetaileR = document.querySelector('.infoDetaileR');
-        let infoDetaileC = document.querySelector('.infoDetaileC');
-        let infoDetaile = document.querySelector('.infoDetaile');
-        infoDetaileP.innerHTML = personFinancingInstallment;
-        infoDetaileR.innerHTML = realEstateFinancingInstallment;
-        infoDetaileC.innerHTML = payValue.value;
-        infoDetaile.innerHTML = 000;
+        infoDetaileC.value = infoDetaileC.value + payValue.value;
+    } else if (commitmentsList.value === 'bills') {
+        billsDetaile.innerHTML = Number(billsDetaile.textContent) + payValue.value;
     }
 }

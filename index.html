@@ -109,41 +109,34 @@
                                         </div>
                                         <div class="currentInstallment">
                                             <div class="info">القسط الحالي :</div>
-                                            <div class="infoDetaileC"></div>
+                                            <input type="number" class="infoDetaileC" pattern="[0-9]*"
+                                                inputmode="numeric" disabled>
                                         </div>
-                                        <div class="surplus">
-                                            <div class="info">الفائض :</div>
-                                            <div class="infoDetaile"></div>
+                                        <div class="percent">
+                                            <div class="info">نسبة القسط الحالي من الراتب :</div>
+                                            <div class="percentN"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="installment">
+                                <div class="bills">
                                     <h3>الفواتير :</h3>
-                                    <div class="installmentDetailes">
-                                        <div class="maxPersonFinancingInfo">
-                                            <div class="info">الحد الاعلى للتمويل الشخصي :</div>
-                                            <div class="infoDetaile"></div>
+                                    <div class="billsDetailes">
+                                        <div class="totalBills">
+                                            <div class="info">اجمالي الفواتير :</div>
+                                            <div class="billsDetaile">2</div>
                                         </div>
-                                        <div class="maxRealEstateFinancingInfo">
-                                            <div class="info">الحد الاعلى للتمويل العقاري :</div>
-                                            <div class="infoDetaile"></div>
-                                        </div>
-                                        <div class="currentInstallment">
-                                            <div class="info">القسط الحالي :</div>
-                                            <div class="infoDetaile"></div>
-                                        </div>
-                                        <div class="surplus">
-                                            <div class="info">الفائض :</div>
-                                            <div class="infoDetaile"></div>
+                                        <div class="percent">
+                                            <div class="info">نسبة الفواتير من الراتب :</div>
+                                            <div class="percentN"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="inputsContainers">
-                                <div for="MonthlyCommitmentsThrRest">المتبقي :</div>
-                                <input type="number" id="MonthlyCommitmentsThrRest" pattern="[0-9]*"
-                                    inputmode="numeric">
+                                <div class="MonthlyCommitmentsThrRestTitle">المتبقي :</div>
+                                <input type="number" id="MonthlyCommitmentsThrRest" pattern="[0-9]*" inputmode="numeric"
+                                    disabled>
                             </div>
                         </section>
                         <section class="maxPersonFinancing">
