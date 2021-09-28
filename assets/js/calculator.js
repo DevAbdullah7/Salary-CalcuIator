@@ -10,6 +10,11 @@ let maxRealEstateFinancingMonthly = document.querySelector('#maxRealEstateFinanc
 let RealEstateFinancingTheRest = document.querySelector('#RealEstateFinancingTheRest');
 let MonthlyCommitments = document.querySelector('#MonthlyCommitments');
 let MonthlyCommitmentsThrRest = document.querySelector('#MonthlyCommitmentsThrRest');
+let personFinancingMonthes = 0;
+let personFinancingInstallment = 0;
+let realEstateFinancingMonthes = 0;
+let realEstateFinancingInstallment = 0;
+let MonthlyCommitmentsInstallment = 0;
 totalSalaryBtn.onclick = function () {
     if (totalSalary.value.length > 3) {
         if (maxPersonFinancingYearsCount.value == '') {
@@ -18,18 +23,17 @@ totalSalaryBtn.onclick = function () {
         if (maxRealEstateFinancingYearsCount.value == '') {
             maxRealEstateFinancingYearsCount.value = 25;
         }
-        let personFinancingMonthes = (maxPersonFinancingYearsCount.value * 12).toFixed(2);
-        let personFinancingInstallment = ((totalSalary.value * 33.33) / 100).toFixed(2);
-        let realEstateFinancingMonthes = (maxRealEstateFinancingYearsCount.value * 12).toFixed(2);
-        let realEstateFinancingInstallment = ((totalSalary.value * 55) / 100).toFixed(2);
-        let MonthlyCommitmentsInstallment = ((totalSalary.value * (45)) / 100).toFixed(2);
+        personFinancingMonthes = (maxPersonFinancingYearsCount.value * 12).toFixed(2);
+        personFinancingInstallment = ((totalSalary.value * 33.33) / 100).toFixed(2);
+        realEstateFinancingMonthes = (maxRealEstateFinancingYearsCount.value * 12).toFixed(2);
+        realEstateFinancingInstallment = ((totalSalary.value * 55) / 100).toFixed(2);
+        MonthlyCommitmentsInstallment = ((totalSalary.value * (45)) / 100).toFixed(2);
         maxPersonFinancingTotal.innerHTML = (personFinancingMonthes * personFinancingInstallment).toFixed(2);
         maxPersonFinancingMonthly.innerHTML = personFinancingInstallment;
         PersonFinancingTheRest.innerHTML = (totalSalary.value - personFinancingInstallment).toFixed(2);
         maxRealEstateFinancingTotal.innerHTML = (realEstateFinancingMonthes * realEstateFinancingInstallment).toFixed(2);
         maxRealEstateFinancingMonthly.innerHTML = realEstateFinancingInstallment;
         RealEstateFinancingTheRest.innerHTML = (totalSalary.value - realEstateFinancingInstallment).toFixed(2);
-        MonthlyCommitmentsThrRest.innerHTML = totalSalary.value;
-
+        MonthlyCommitmentsThrRest.value = totalSalary.value;
     }
 }

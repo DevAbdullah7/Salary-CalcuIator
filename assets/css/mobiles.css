@@ -350,7 +350,7 @@ body {
     align-items: center;
     border-radius: 10px;
     border: none;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     outline: none;
     background: rgba(255, 255, 255, 0.25);
     text-align: center;
@@ -382,7 +382,7 @@ body {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
 }
 .btns {
     position: relative;
@@ -404,7 +404,6 @@ body {
     font-size: 12px;
     background-color: rgba(0, 0, 0, 0.21);
     box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
-    border: 2px solid rgba(0, 0, 0, 0.5);
     border-bottom: none;
     cursor: pointer;
     color: var(--white);
@@ -421,7 +420,7 @@ body {
     width: 100%;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.75);
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     border-radius: 10px;
 }
 .totalSalaryDetailes .inputsContainer {
@@ -440,8 +439,9 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     outline: none;
+    border: none;
     background: rgba(255, 255, 255, 0.25);
     text-align: center;
     font-size: 16px;
@@ -480,12 +480,13 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     outline: none;
     background: rgba(255, 255, 255, 0.25);
     text-align: center;
     font-size: 16px;
     margin-left: 5px;
+    border: none;
 }
 .monthlyCommitments,
 .personFinancing,
@@ -517,24 +518,27 @@ body {
 .personFinancing.show {
     opacity: 1;
 }
-.inputsContainers .MonthlyCommitmentsThrRest {
-    background-color: rgba(0, 0, 0, 0.5) importent!;
+.MonthlyCommitmentsThrRest {
+    border: none;
 }
 .maxMonthlyCommitments .inputsContainer, .inputsContainers {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: none;
 }
 .maxMonthlyCommitments .inputsContainer input {
     width: 100px;
     margin: 0;
+    border: none;
 }
 .maxMonthlyCommitments .inputsContainer select {
     width: 80px;
     height: 25px;
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
+    -webkit-box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
+            box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -560,18 +564,13 @@ body {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.5);
-    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     border-radius: 10px;
     overflow-y: scroll;
 }
 .installment h3 {
     text-align: center;
 }
-/* .installment .installmentDetailes {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-} */
 .installment .maxPersonFinancingInfo, 
 .installment .maxRealEstateFinancingInfo,
 .installment .currentInstallment,
@@ -581,10 +580,14 @@ body {
     justify-content: space-between;
     margin-bottom: 5px;
 }
-.result .infoDetaile {
+.infoDetaile,
+.infoDetaileP,
+.infoDetaileR,
+.infoDetaileC {
     width: 67.5px;
     height: 25px;
     margin-right: 5px;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 2.5px 1px rgba(0, 0, 0, 0.5) inset;
     border-radius: 5px;

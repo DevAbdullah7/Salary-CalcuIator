@@ -75,7 +75,7 @@
                 <div class="totalSalaryContainer">
                     <div class="totalSalary">
                         <span id="totalSalaryBtn">احسب</span>
-                        <input type="number" id="totalSalary" pattern="[0-9]*" inputmode="numeric"
+                        <input dir="ltr" type="number" id="totalSalary" pattern="[0-9]*" inputmode="numeric"
                             placeholder="اجمالي الراتب">
                     </div>
                     <div class="btns">
@@ -101,15 +101,15 @@
                                     <div class="installmentDetailes">
                                         <div class="maxPersonFinancingInfo">
                                             <div class="info">الحد الاعلى للتمويل الشخصي :</div>
-                                            <div class="infoDetaile"></div>
+                                            <div class="infoDetaileP"></div>
                                         </div>
                                         <div class="maxRealEstateFinancingInfo">
                                             <div class="info">الحد الاعلى للتمويل العقاري :</div>
-                                            <div class="infoDetaile"></div>
+                                            <div class="infoDetaileR"></div>
                                         </div>
                                         <div class="currentInstallment">
                                             <div class="info">القسط الحالي :</div>
-                                            <div class="infoDetaile"></div>
+                                            <div class="infoDetaileC"></div>
                                         </div>
                                         <div class="surplus">
                                             <div class="info">الفائض :</div>
@@ -142,7 +142,8 @@
                             </div>
                             <div class="inputsContainers">
                                 <div for="MonthlyCommitmentsThrRest">المتبقي :</div>
-                                <div id="MonthlyCommitmentsThrRest">0000</div>
+                                <input type="number" id="MonthlyCommitmentsThrRest" pattern="[0-9]*"
+                                    inputmode="numeric">
                             </div>
                         </section>
                         <section class="maxPersonFinancing">

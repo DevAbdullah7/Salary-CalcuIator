@@ -33,10 +33,19 @@ btns.forEach(function (btn) {
         }
     }
 })
-let test = document.querySelector('#commitmentsList');
-console.log(test);
+let commitmentsList = document.querySelector('#commitmentsList');
 let patBtn = document.querySelector('.pay');
 let payValue = document.querySelector('#payValue');
 patBtn.onclick = function () {
-    MonthlyCommitmentsThrRest.innerHTML = Number(MonthlyCommitmentsThrRest.value) - Number(payValue.value);
+    MonthlyCommitmentsThrRest.value = MonthlyCommitmentsThrRest.value - payValue.value;
+    if (commitmentsList.value === 'installment') {
+        let infoDetaileP = document.querySelector('.infoDetaileP');
+        let infoDetaileR = document.querySelector('.infoDetaileR');
+        let infoDetaileC = document.querySelector('.infoDetaileC');
+        let infoDetaile = document.querySelector('.infoDetaile');
+        infoDetaileP.innerHTML = personFinancingInstallment;
+        infoDetaileR.innerHTML = realEstateFinancingInstallment;
+        infoDetaileC.innerHTML = payValue.value;
+        infoDetaile.innerHTML = 000;
+    }
 }
