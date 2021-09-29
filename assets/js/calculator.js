@@ -1,5 +1,5 @@
 let totalSalary = document.querySelector('#totalSalary');
-let totalSalaryBtn = document.querySelector('#totalSalaryBtn');
+let totalSalaryBtn = document.querySelector('.totalSalaryBtn');
 let maxPersonFinancingYearsCount = document.querySelector('#maxPersonFinancingYearsCount');
 let maxPersonFinancingTotal = document.querySelector('#maxPersonFinancingTotal');
 let maxPersonFinancingMonthly = document.querySelector('#maxPersonFinancingMonthly');
@@ -34,7 +34,7 @@ totalSalaryBtn.onclick = function () {
         maxRealEstateFinancingTotal.innerHTML = (realEstateFinancingMonthes * realEstateFinancingInstallment).toFixed(2);
         maxRealEstateFinancingMonthly.innerHTML = realEstateFinancingInstallment;
         RealEstateFinancingTheRest.innerHTML = (totalSalary.value - realEstateFinancingInstallment).toFixed(2);
-        MonthlyCommitmentsThrRest.innerHTML = totalSalary.value;
+        MonthlyCommitmentsThrRest.innerHTML = `${totalSalary.value} ريال`;
         infoDetaileP.innerHTML = personFinancingInstallment;
         infoDetaileR.innerHTML = realEstateFinancingInstallment;
     }

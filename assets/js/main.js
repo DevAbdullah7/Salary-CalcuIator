@@ -15,6 +15,7 @@ let infoDetaileR = document.querySelector('.infoDetaileR');
 let infoDetaileC = document.querySelector('.infoDetaileC');
 let infoDetaile = document.querySelector('.infoDetaile');
 let billsDetaile = document.querySelector('.billsDetaile');
+let personalCommitmentsDetaile = document.querySelector('.personalCommitmentsDetaile');
 menu.onclick = function () {
     menu.classList.toggle('activate');
     infoLayout.classList.toggle('activate');
@@ -43,7 +44,7 @@ let patBtn = document.querySelector('.pay');
 let payValue = document.querySelector('#payValue');
 patBtn.onclick = function () {
     let temp = 0;
-    MonthlyCommitmentsThrRest.textContent = parseInt(MonthlyCommitmentsThrRest.textContent) - payValue.value;
+    MonthlyCommitmentsThrRest.textContent = `${parseInt(MonthlyCommitmentsThrRest.textContent) - payValue.value} ريال`;
     if (commitmentsList.value === 'installment') {
         if (infoDetaileC.textContent == '') {
             infoDetaileC.textContent = parseInt(payValue.value)
@@ -60,5 +61,13 @@ patBtn.onclick = function () {
         }
         let percentBills = document.querySelector('.percentBills');
         percentBills.innerHTML = `${((parseInt(billsDetaile.textContent) * 100) / parseInt(totalSalary.value)).toFixed(2)}%`
+    } else if (commitmentsList.value === 'personalCommitments') {
+        if (personalCommitmentsDetaile.textContent == '') {
+            personalCommitmentsDetaile.textContent = parseInt(payValue.value)
+        } else {
+            personalCommitmentsDetaile.innerHTML = parseInt(personalCommitmentsDetaile.textContent) + parseInt(payValue.value);
+        }
+        let percentPersonalCommitments = document.querySelector('.percentPersonalCommitments');
+        percentPersonalCommitments.innerHTML = `${((parseInt(personalCommitmentsDetaile.textContent) * 100) / parseInt(totalSalary.value)).toFixed(2)}%`
     }
 }
