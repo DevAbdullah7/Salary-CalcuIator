@@ -56,8 +56,8 @@ body {
     position: fixed;
     width: 50px;
     height: 50px;
-    top: 0px;
-    right: 0%;
+    top: 5px;
+    right: 5px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -72,6 +72,10 @@ body {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+}
+.menu.activate {
+    top: 30px;
+    right: 15px;
 }
 .menu .control {
     position: relative;
@@ -377,9 +381,9 @@ body {
             transform: translateY(-15px);
     margin-left: 5px;
 }
-.totalSalary span {
+.totalSalary div {
     position: relative;
-    width: 80px;
+    width: 100px;
     height: 50px;
     margin-left: 10px;
     display: flex;
@@ -389,15 +393,17 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.5) inset;
-    background-image: url('../media/salaryCount.png');
     color: white;
-    text-shadow: 2px 0 3px #000, -2px 0 3px #000, 0 2px 3px #000, 0 -2px 3px #000;
 }
 .totalSalaryBtn {
     background-image: url('../media/salaryCount.png');
     background-size: cover;
     background-position: -15% 50%;
-    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+}
+.totalSalary div i {
+    color: #000;
+    font-size: 1rem;
+    margin-left: 5px;
 }
 .btns {
     position: relative;
@@ -649,6 +655,6 @@ body {
 .result hr {
     margin: 10px auto;
     width: 75%;
-    box-shadow: 50px 0 15px 0px rgba(0, 0, 0, 0.5), -50px 0 15px 0px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 50px 0 15px 0px rgba(0, 0, 0, 0.5), -50px 0 15px 0px rgba(0, 0, 0, 0.5); */
 }
 /* ----- FOOTER ----- */
