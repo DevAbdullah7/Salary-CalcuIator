@@ -43,7 +43,7 @@ html {
 
 /* ----- BODY ----- */
 body {
-    background: url('../media/backimg.jpg');
+    /* background: url('../media/backimg.jpg'); */
     background-size: cover;
     background-attachment: fixed;
     background-position-x: -50px;
@@ -51,6 +51,7 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+    background-color: #e4405f;
 }
 .menu {
     position: fixed;
